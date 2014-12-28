@@ -43,10 +43,14 @@
 
               <!-- make this a normal form then incorporate bootstrap -->
               <div class="input-group">
-                <input type="text" class="form-control" id="topic1" onclick="alert('hey')" placeholder="liver organogenesis">
+
+                <input type="text" class="form-control" id="topic1" 
+                  onkeydown="if (event.keycode == 13) document.getElementById('topicButton').click()"
+                  placeholder="liver organogenesis">
 
                 <span class="input-group-btn">
-                  <button id="topicButton" class="btn btn-primary topic">Search</button>
+                  <button id="topicButton" class="btn btn-primary topic"
+                      onclick="processTopic('click!')">Search</button>
                 </span>
               </div><!-- .input-group -->
 
