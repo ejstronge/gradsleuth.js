@@ -17,66 +17,42 @@
 
   <body>
 
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Gradsleuth</a>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
 
-        <!-- Content here will be collapsed on appropriately small windows -->
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav pull-right">
-            <li class="active"><a href="#">Search...</a></li>
-            <li><a href="#contact">Login</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid" style="margin-bottom:90px">
+        <div class="navbar-header"> 
+          <a class="navbar-brand" href="#">
+          <!-- TODO Change image height in smaller viewports-->
+          <img src="assets/img/gradsleuth_logo.png" alt="GradSleuth" height=90></a>
+        </div>
       </div>
-    </div>
+    </nav>
 
     <div class="container cta">
-
-      <div class="row">
-
-        <div class="col-sm-12 topic-input">
-          <h1>
-            Find your top graduate program.
-            <br>
-            <small>No more arbitrary rankings - let the papers decide!</small>
-          </h1>
-        </div>
-      </div>
 
       <div class="row search-row">
 
         <div class="col-md-12 topic-input">
-
           <form class="form-inline" role="form">
 
-            <span class="h3 topic-invitation">I want to study...</span>
-
+            <span class="h1 topic-invitation">I want to study...</span>
             <div class="form-group">
 
               <label class="sr-only" for="topic1">Topic of interest</label>
+
+              <!-- make this a normal form then incorporate bootstrap -->
               <div class="input-group">
-                <input type="text" class="form-control" id="topic1" onSubmit="processTopic()", placeholder="liver organogenesis">
+                <input type="text" class="form-control" id="topic1" onclick="alert('hey')" placeholder="liver organogenesis">
 
                 <span class="input-group-btn">
-                  <button class="btn btn-primary topic" type="submit">Search</button>
+                  <button id="topicButton" class="btn btn-primary topic">Search</button>
                 </span>
               </div><!-- .input-group -->
+
             </div>
-
           </form>
-
         </div>
-
       </div>
 
     <footer>
@@ -92,5 +68,11 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src='temp_assets/jquery.js'></script>
     <script src="temp_assets/bootstrap.js"></script>
+    <script>
+    var processTopic = function(e) {
+      alert(e)
+    }
+
+    </script>
   </body>
 </html>
