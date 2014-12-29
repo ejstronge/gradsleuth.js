@@ -48,7 +48,7 @@
 
                 <span class="input-group-btn">
                   <button id="topicButton" class="btn btn-primary topic"
-                      onclick="processTopic('click!')">Search</button>
+                      onclick="processTopic(document.getElementById('topic1').value)">Search</button>
                 </span>
               </div><!-- .input-group -->
 
@@ -74,7 +74,7 @@
 
     <script>
     var processTopic = function(e) {
-      alert(e)
+      console.log(e);
     }
 
     </script>
