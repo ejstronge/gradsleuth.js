@@ -25,9 +25,10 @@ var search = ncbi.makeSearchObject(),
 
 for (var s in usa_affiliation_strings) {
   if (usa_affiliation_strings.hasOwnProperty(s)) {
-    console.log(s);
-    old_term = search.param('term');
+    old_term = search.searchParam('term');
     state_abbreviation = usa_affiliation_strings[s];
-    search.param('term', old_term + ' AND ' + state_abbreviation + '[ad]');
+    search.searchParam('term', old_term + ' AND ' + state_abbreviation + '[ad]');
   }
 }
+
+console.log(search.getSearchData());
